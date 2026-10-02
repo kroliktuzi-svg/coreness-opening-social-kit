@@ -26,27 +26,27 @@ window.SITE_CONFIG = {
   },
 
   images: {
-    /* 第 1 张固定；后续上传正式主图时只替换 src，并将 fit 改为 cover */
+    /* 第 1 张固定 */
     mainKv: {
-      src: "./images/coreness-logo.png",
-      alt: "重心 CORENESS 品牌标志",
-      label: "品牌 LOGO · 固定",
-      fit: "contain"
+      src: "./images/content/01-necklace.jpg",
+      alt: "重心 CORENESS 水晶项链上身展示",
+      label: "水晶项链",
+      fit: "cover"
     },
 
     /* 第 2 张随机池 */
     image2Pool: [
-      { src: "./images/coreness-logo.png", alt: "第 2 张图片占位", label: "图片 02 · 待替换", fit: "contain" }
+      { src: "./images/content/02-styling.jpg", alt: "重心 CORENESS 水晶首饰上手展示", label: "水晶首饰穿搭", fit: "cover" }
     ],
 
     /* 第 3 张随机池 */
     image3Pool: [
-      { src: "./images/coreness-logo.png", alt: "第 3 张图片占位", label: "图片 03 · 待替换", fit: "contain" }
+      { src: "./images/content/03-bracelet.jpg", alt: "重心 CORENESS 水晶手串展示", label: "水晶手串", fit: "cover" }
     ],
 
     /* 第 4 张随机池 */
     image4Pool: [
-      { src: "./images/coreness-logo.png", alt: "第 4 张图片占位", label: "图片 04 · 待替换", fit: "contain" }
+      { src: "./images/content/04-earring.jpg", alt: "重心 CORENESS 水晶耳饰上身展示", label: "水晶耳饰", fit: "cover" }
     ]
   },
 
