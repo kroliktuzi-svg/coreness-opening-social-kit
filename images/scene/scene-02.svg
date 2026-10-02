@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-label="活动现场图占位二">
+  <rect width="1080" height="1080" fill="#eaf0ff"/><rect x="90" y="130" width="900" height="540" rx="36" fill="#2457f5"/><rect x="160" y="200" width="760" height="400" rx="22" fill="#14213d"/><circle cx="540" cy="400" r="120" fill="#ffd43b"/>
+  <path d="M80 900q130-230 260 0M320 900q150-280 300 0M610 900q150-260 300 0M820 900q100-180 200 0" fill="#2457f5"/>
+  <text x="540" y="1010" text-anchor="middle" fill="#14213d" font-family="Arial,sans-serif" font-size="50" font-weight="800">活动现场图 02</text>
+</svg>

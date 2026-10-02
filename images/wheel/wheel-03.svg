@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-label="转盘图占位三">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#14213d"/><stop offset="1" stop-color="#2457f5"/></linearGradient></defs><rect width="1080" height="1080" fill="url(#g)"/>
+  <text x="540" y="250" text-anchor="middle" fill="#ffd43b" font-family="Arial,sans-serif" font-size="82" font-weight="900">SPIN TO WIN</text><circle cx="540" cy="570" r="265" fill="none" stroke="#fff" stroke-width="70" stroke-dasharray="200 60"/><circle cx="540" cy="570" r="90" fill="#ffd43b"/>
+  <text x="540" y="955" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="50" font-weight="700">幸运转盘图 03</text>
+</svg>

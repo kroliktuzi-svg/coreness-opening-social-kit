@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-label="抽签图占位二">
+  <rect width="1080" height="1080" fill="#14213d"/><circle cx="230" cy="210" r="150" fill="#ffd43b"/><circle cx="860" cy="850" r="260" fill="#2457f5"/>
+  <text x="90" y="570" fill="#fff" font-family="Arial,sans-serif" font-size="132" font-weight="900">抽一张</text><text x="94" y="690" fill="#ffd43b" font-family="Arial,sans-serif" font-size="72" font-weight="800">今日好运</text><text x="98" y="770" fill="#fff" font-family="Arial,sans-serif" font-size="34">抽签互动图 02 · 请替换</text>
+</svg>

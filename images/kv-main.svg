@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-labelledby="title desc">
+  <title id="title">周年活动主视觉占位图</title><desc id="desc">蓝色与黄色的周年主视觉占位图，请替换为正式KV。</desc>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1439b8"/><stop offset="1" stop-color="#2f72ff"/></linearGradient></defs>
+  <rect width="1080" height="1080" fill="url(#g)"/><circle cx="850" cy="210" r="210" fill="#ffd43b"/><circle cx="940" cy="870" r="280" fill="#1439b8" opacity=".45"/>
+  <text x="90" y="150" fill="#fff" font-family="Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="6">MAIN KEY VISUAL</text>
+  <text x="82" y="650" fill="#fff" font-family="Arial,sans-serif" font-size="390" font-weight="900">08</text>
+  <text x="94" y="770" fill="#ffd43b" font-family="Arial,sans-serif" font-size="72" font-weight="800">周年活动</text>
+  <text x="98" y="845" fill="#fff" font-family="Arial,sans-serif" font-size="34">请替换为正式主 KV</text>
+</svg>

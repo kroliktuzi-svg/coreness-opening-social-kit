@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-label="转盘图占位二">
+  <rect width="1080" height="1080" fill="#ffd43b"/><circle cx="540" cy="500" r="360" fill="#14213d" stroke="#fff" stroke-width="22"/><path d="M540 140v720M180 500h720M285 245l510 510M795 245L285 755" stroke="#fff" stroke-width="12"/><circle cx="540" cy="500" r="92" fill="#2457f5" stroke="#fff" stroke-width="14"/>
+  <text x="540" y="980" text-anchor="middle" fill="#14213d" font-family="Arial,sans-serif" font-size="54" font-weight="800">幸运转盘 02 · 请替换</text>
+</svg>

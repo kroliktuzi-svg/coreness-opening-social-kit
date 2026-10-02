@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-label="抽签图占位三">
+  <rect width="1080" height="1080" fill="#eaf0ff"/><path d="M0 820L1080 510v570H0z" fill="#2457f5"/><rect x="160" y="140" width="760" height="540" rx="54" fill="#fff" stroke="#14213d" stroke-width="14"/>
+  <text x="540" y="390" text-anchor="middle" fill="#2457f5" font-family="Arial,sans-serif" font-size="118" font-weight="900">GOOD</text><text x="540" y="510" text-anchor="middle" fill="#14213d" font-family="Arial,sans-serif" font-size="70" font-weight="800">LUCK</text><text x="540" y="885" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="50" font-weight="700">抽签互动图 03</text>
+</svg>

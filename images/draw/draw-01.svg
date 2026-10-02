@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" role="img" aria-label="抽签图占位一">
+  <rect width="1080" height="1080" fill="#ffd43b"/><rect x="92" y="92" width="896" height="896" rx="80" fill="#fff"/>
+  <circle cx="540" cy="420" r="210" fill="#2457f5"/><text x="540" y="470" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="150" font-weight="900">LUCK</text>
+  <text x="540" y="760" text-anchor="middle" fill="#14213d" font-family="Arial,sans-serif" font-size="72" font-weight="800">抽签互动 01</text><text x="540" y="840" text-anchor="middle" fill="#65718b" font-family="Arial,sans-serif" font-size="34">替换此图片</text>
+</svg>
