@@ -15,6 +15,7 @@
     previousFocus: null,
     toastTimer: null,
     imagePress: null,
+    imageTouch: null,
     suppressImageClick: false
   };
 
@@ -214,6 +215,37 @@
     elements.imageViewerImage.addEventListener("pointercancel", () => {
       state.imagePress = null;
     });
+    elements.imageViewerImage.addEventListener("touchstart", (event) => {
+      const touch = event.touches[0];
+      if (!touch) return;
+      state.suppressImageClick = false;
+      state.imageTouch = {
+        startedAt: performance.now(),
+        x: touch.clientX,
+        y: touch.clientY,
+        moved: false
+      };
+    }, { passive: true });
+    elements.imageViewerImage.addEventListener("touchmove", (event) => {
+      if (!state.imageTouch) return;
+      const touch = event.touches[0];
+      if (!touch) return;
+      const movedX = Math.abs(touch.clientX - state.imageTouch.x);
+      const movedY = Math.abs(touch.clientY - state.imageTouch.y);
+      if (movedX > 10 || movedY > 10) state.imageTouch.moved = true;
+    }, { passive: true });
+    elements.imageViewerImage.addEventListener("touchend", () => {
+      if (!state.imageTouch) return;
+      const touch = state.imageTouch;
+      const duration = performance.now() - touch.startedAt;
+      state.imageTouch = null;
+
+      if (!touch.moved && duration < 450) closeImage();
+      if (duration >= 450) state.suppressImageClick = true;
+    }, { passive: true });
+    elements.imageViewerImage.addEventListener("touchcancel", () => {
+      state.imageTouch = null;
+    }, { passive: true });
     elements.imageViewerImage.addEventListener("contextmenu", () => {
       state.suppressImageClick = true;
     });
