@@ -13,7 +13,9 @@
     image3Index: -1,
     image4Index: -1,
     previousFocus: null,
-    toastTimer: null
+    toastTimer: null,
+    imagePress: null,
+    suppressImageClick: false
   };
 
   const elements = {
@@ -182,6 +184,46 @@
     elements.copyButton.addEventListener("click", copyText);
     elements.refreshButton.addEventListener("click", () => renderSelection(true));
     elements.imageViewerClose.addEventListener("click", closeImage);
+    elements.imageViewerImage.addEventListener("pointerdown", (event) => {
+      state.suppressImageClick = false;
+      state.imagePress = {
+        pointerType: event.pointerType,
+        startedAt: performance.now(),
+        x: event.clientX,
+        y: event.clientY,
+        moved: false
+      };
+    });
+    elements.imageViewerImage.addEventListener("pointermove", (event) => {
+      if (!state.imagePress) return;
+      const movedX = Math.abs(event.clientX - state.imagePress.x);
+      const movedY = Math.abs(event.clientY - state.imagePress.y);
+      if (movedX > 10 || movedY > 10) state.imagePress.moved = true;
+    });
+    elements.imageViewerImage.addEventListener("pointerup", () => {
+      if (!state.imagePress) return;
+      const press = state.imagePress;
+      const duration = performance.now() - press.startedAt;
+      state.imagePress = null;
+
+      if (press.pointerType === "touch" || press.pointerType === "pen") {
+        if (!press.moved && duration < 450) closeImage();
+        if (duration >= 450) state.suppressImageClick = true;
+      }
+    });
+    elements.imageViewerImage.addEventListener("pointercancel", () => {
+      state.imagePress = null;
+    });
+    elements.imageViewerImage.addEventListener("contextmenu", () => {
+      state.suppressImageClick = true;
+    });
+    elements.imageViewerImage.addEventListener("click", () => {
+      if (state.suppressImageClick) {
+        state.suppressImageClick = false;
+        return;
+      }
+      closeImage();
+    });
     elements.imageViewerStage.addEventListener("click", (event) => {
       if (event.target === elements.imageViewerStage) closeImage();
     });
