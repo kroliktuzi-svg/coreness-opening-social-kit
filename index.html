@@ -40,6 +40,16 @@
       </main>
     </div>
 
+    <div class="image-viewer" id="image-viewer" role="dialog" aria-modal="true" aria-label="图片预览" hidden>
+      <div class="image-viewer-toolbar">
+        <p>长按图片保存</p>
+        <button class="image-viewer-close" id="image-viewer-close" type="button" aria-label="关闭图片预览">关闭</button>
+      </div>
+      <div class="image-viewer-stage" id="image-viewer-stage">
+        <img class="image-viewer-image" id="image-viewer-image" src="" alt="" />
+      </div>
+    </div>
+
     <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
 
     <script src="./js/coreness-copy.js"></script>
