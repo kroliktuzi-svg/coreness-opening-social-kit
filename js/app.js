@@ -9,9 +9,7 @@
 
   const state = {
     copyIndex: -1,
-    image2Index: -1,
-    image3Index: -1,
-    image4Index: -1,
+    imageIndexes: [-1, -1, -1, -1],
     previousFocus: null,
     toastTimer: null,
     imagePress: null,
@@ -67,17 +65,15 @@
 
   function getNextSelection() {
     state.copyIndex = randomIndex(config.copyGroups.length, state.copyIndex);
-    state.image2Index = randomIndex(config.images.image2Pool.length, state.image2Index);
-    state.image3Index = randomIndex(config.images.image3Pool.length, state.image3Index);
-    state.image4Index = randomIndex(config.images.image4Pool.length, state.image4Index);
+    const images = config.images.imagePools.map((pool, poolIndex) => {
+      const nextIndex = randomIndex(pool.images.length, state.imageIndexes[poolIndex]);
+      state.imageIndexes[poolIndex] = nextIndex;
+      return pool.images[nextIndex];
+    });
+
     return {
       copy: config.copyGroups[state.copyIndex],
-      images: [
-        config.images.mainKv,
-        config.images.image2Pool[state.image2Index],
-        config.images.image3Pool[state.image3Index],
-        config.images.image4Pool[state.image4Index]
-      ]
+      images
     };
   }
 
@@ -104,11 +100,11 @@
           figure.setAttribute("aria-label", `打开${image.alt}大图`);
 
           const img = document.createElement("img");
-          img.src = image.src;
+          img.src = image.thumb || image.src;
           img.alt = image.alt;
           img.style.objectFit = image.fit || "cover";
           if (image.fit === "contain") figure.classList.add("logo-placeholder");
-          img.loading = index === 0 ? "eager" : "lazy";
+          img.loading = index < 2 ? "eager" : "lazy";
           img.decoding = "async";
 
           figure.addEventListener("click", () => openImage(image));
@@ -271,6 +267,14 @@
     config.copyGroups.forEach((group, index) => {
       if (!Array.isArray(group) || group.length !== 3) {
         console.warn(`第 ${index + 1} 组文案不是三行。`);
+      }
+    });
+    if (!Array.isArray(config.images.imagePools) || config.images.imagePools.length !== 4) {
+      throw new Error("图片配置必须包含 4 个图库，依次对应页面上的 4 个图片格子。");
+    }
+    config.images.imagePools.forEach((pool, index) => {
+      if (!Array.isArray(pool.images) || pool.images.length === 0) {
+        throw new Error(`第 ${index + 1} 个图片库不能为空。`);
       }
     });
   }
