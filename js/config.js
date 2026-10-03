@@ -5,9 +5,10 @@
 
 function createCorenessImage(groupNumber, fileName, position) {
   const basePath = `./images/groups/group-${groupNumber}`;
+  const imageVersion = "20261003-optimized";
   return {
-    src: `${basePath}/original/${fileName}`,
-    thumb: `${basePath}/thumb/${fileName}`,
+    src: `${basePath}/original/${fileName}?v=${imageVersion}`,
+    thumb: `${basePath}/thumb/${fileName}?v=${imageVersion}`,
     alt: `重心 CORENESS 第 ${groupNumber} 组图片 ${position + 1}`,
     fit: "cover"
   };
